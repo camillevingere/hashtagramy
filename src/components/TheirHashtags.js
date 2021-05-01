@@ -10,13 +10,10 @@ function TheirHashtags(props) {
   const notes = useSelector((state) => state.theirHashtags, shallowEqual);
   const dispatch = useDispatch();
   const addNote = (note) => dispatch(addnote(note));
-  const deleteNote = (id) => dispatch(deletenote(id));
 
   const navigation = useNavigation();
 
   const handleModify = (title, hashtags) => {
-    //setTitle(title);
-    //setHashtags(hashtags);
     navigation.navigate("MyForm", {
       addNote,
       title,

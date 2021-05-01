@@ -1,7 +1,6 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
 import { Appbar, Title } from "react-native-paper";
-import { DarkTheme } from "@react-navigation/native";
 
 function Header({ titleText }) {
   return (

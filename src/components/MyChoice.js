@@ -1,31 +1,11 @@
 import React, { useState } from "react";
 import { View, StyleSheet } from "react-native";
 import { Avatar, Button, Card, Paragraph, TextInput } from "react-native-paper";
-import BootstrapStyleSheet from "react-native-bootstrap-styles";
 import Clipboard from "expo-clipboard";
 
 const LeftContent = (props) => (
   <Avatar.Icon {...props} icon="folder" style={{ flex: 6 }} />
 );
-
-const BODY_COLOR = "#000022",
-  TEXT_MUTED = "#888888";
-
-// custom constants
-const constants = {
-  BODY_COLOR,
-  TEXT_MUTED,
-};
-
-// custom classes
-const classes = {
-  title: {
-    color: "red",
-  },
-};
-
-const bootstrapStyleSheet = new BootstrapStyleSheet(constants, classes);
-const { styles: s, constants: c } = bootstrapStyleSheet;
 
 var choice = "";
 var nbhashtags = 0;

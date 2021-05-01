@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import Text from "react-native";
+import React from "react";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
@@ -23,8 +22,6 @@ var OPTIONS1 = [];
 var OPTIONS2 = [];
 
 var ID = 123;
-
-let array = {};
 
 const mapStateToProps = (state) => {
   return {
@@ -50,7 +47,11 @@ function ModifyTheirHashtags(props) {
         )}
         options={{ headerShown: false }}
       />
-      <Stack.Screen name="MyForm" component={MyForm} />
+      <Stack.Screen
+        name="MyForm"
+        component={MyForm}
+        options={{ headerShown: false }}
+      />
     </Stack.Navigator>
   );
 }
@@ -237,15 +238,9 @@ class MyTabs extends React.PureComponent {
   };
 
   componentDidMount() {
-    /*array["salut"] = this.fromStrToArray("#hehe #aller #stp");
-    array["hello"] = 300; //"#hehe #aller #stp";
-    console.log("array =" + array["salut"]);*/
     //this.clearAllData();
     this.initDatabase();
     this.dumpRaw();
-
-    /*const action = { type: "LOAD", value: this.state.hashtags2 };
-    this.props.dispatch(action);*/
   }
 
   componentDidUpdate() {
@@ -285,8 +280,6 @@ class MyTabs extends React.PureComponent {
           name="ModifyTheirHashtags"
           children={() => (
             <ModifyTheirHashtags
-              //key={this.state.idTheirHashtags}
-              //handleId={this.handleIdTheirHashtags}
               data={this.state}
               isForm={this.props.isForm}
               memoryCheck={this.handleCheckboxChange2}

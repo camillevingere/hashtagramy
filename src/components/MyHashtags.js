@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Text, ScrollView } from "react-native";
+import { ScrollView } from "react-native";
 import HashtagBox from "./HashtagBox.js";
 
 class MyHashtags extends React.PureComponent {

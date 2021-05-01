@@ -1,5 +1,4 @@
 import React from "react";
-import { Image, Text, View, SafeAreaView } from "react-native";
 import { Asset } from "expo-asset";
 import AppLoading from "expo-app-loading";
 import { Provider } from "react-redux";
